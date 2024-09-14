@@ -34,7 +34,8 @@ onMounted(async () => {
 <template>
   <section class="w-full max-w-screen-lg mx-auto px-4 py-16 grid gap-12">
     <h1 class="text-3xl text-center font-medium tracking-tighter">
-      Category: <span class="text-emerald-500">{{ categoryName }}</span>
+      <RouterLink to="/">Home </RouterLink> / Category:
+      <span class="text-emerald-500">{{ categoryName }}</span>
     </h1>
     <div v-if="isLoading" class="w-fit mx-auto py-12 animate-spin">
       <svg
