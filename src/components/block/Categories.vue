@@ -27,10 +27,13 @@ onMounted(async () => {
     <h1 class="text-3xl font-medium tracking-tighter">
       Explore by Categories:
     </h1>
-    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
-      <div
+    <div
+      class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6"
+    >
+      <RouterLink
         v-for="(category, index) in categories"
         :key="index"
+        :to="`/category/${category.strCategory}`"
         class="bg-secondary p-1 rounded-xl hover:cursor-pointer"
       >
         <div
@@ -45,7 +48,7 @@ onMounted(async () => {
             {{ category?.strCategory }}
           </h4>
         </div>
-      </div>
+      </RouterLink>
     </div>
   </div>
 </template>
